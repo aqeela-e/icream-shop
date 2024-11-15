@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .contact-section {
+            padding: 100px 20px;
+            display: flex;
+            justify-content: center;
+            background-image: url("https://wallpapercave.com/wp/wp6751238.jpg");
+        }
+        .contact-container {
+            max-width: 1200px;
+            width: 100%;
+        }
+        .row {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+        .form {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+        }
+        .inputBox {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .inputBox span {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            color: #333;
+        }
+        .inputBox input {
+            width: 100%;
+            padding: 10px 40px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+        input[type="submit"] {
+            background: #C06B3E;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+        input[type="submit"]:hover {
+            background: #a5552c;
+        }
+        .map iframe {
+            width: 100%;
+            border-radius: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: #fff;
+        }
+        .logo img {
+            height: 80px;
+        }
+        .social-icons .icon {
+            margin: 0 10px;
+            color: #fff;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+        .social-icons .icon:hover {
+            color: #C06B3E;
+        }
+    </style>
+</head>
+<body>
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <div class="row">
+                <div class="form">
+                    <form action="">
+                        <div class="inputBox">
+                            <span class="fas fa-user"></span>
+                            <input type="text" placeholder="Name">
+                        </div>
+                        <div class="inputBox">
+                            <span class="fas fa-envelope"></span>
+                            <input type="email" placeholder="Email">
+                        </div>
+                        <div class="inputBox">
+                            <span class="fas fa-phone"></span>
+                            <input type="number" placeholder="Number">
+                        </div>
+                        <div class="inputBox">
+                            <span class="fas fa-comment"></span>
+                            <input type="text" placeholder="Message">
+                        </div>
+                        <input type="submit" value="Send">
+                    </form>
+                </div>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d518415200.9877717!2d110.77704038455403!3d-7.55380290905223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a145d4a5aebf1%3A0xa42193c94935b134!2sUniversitas%20Pignatelli%20Triputra%20(UPITRA)!5e0!3m2!1sid!2sid!4v1719218329480!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="logo">
+            <img src="https://tse4.mm.bing.net/th?id=OIP.7h_NkAbcbv0hI19FsmUXOgHaHa&pid=Api&P=0&h=220" alt="Coffee Logo">
+        </div>
+        <div class="social-icons">
+            <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="icon"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="icon"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Menu</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .menu-section {
+            padding: 100px 20px;
+            background-image: url("https://images.creativemarket.com/0.1.0/ps/5712110/1820/1214/m1/fpnw/wm1/qqqxep3a1kut92sn03vxmppbcdoab1fn2wooaq4jkeo5lplk1hsrwfhmmxjigj0d-.jpg?1547653193&s=17bc934034eb2087827ffdeaa03a80b3");
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .menu-section h2 {
+            font-size: 3rem;
+            margin-bottom: 50px;
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        .menu-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .menu-item {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 20px;
+            width: calc(33.333% - 20px);
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-item img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .menu-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .menu-item p {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .menu-item button {
+            background: #C06B3E;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+            border: 1px solid #C06B3E;
+        }
+
+        .menu-item button:hover {
+            background: #a5552c;
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <section id="menu" class="menu-section">
+        <h2>Our Menu</h2>
+        <div class="menu-container">
+            <div class="menu-item">
+                <img src="https://purepng.com/public/uploads/large/51505911158ccsfpu7zfzlnr04cvb4liizwpp2sbkldrrya3guzldprhahaiksa0pzfinpdq0zglyc9uwnnasjebkmbnlpaziozgxpkklhgx5wb.png" alt="Espresso">
+                <h3>Espresso</h3>
+                <p>$3.00</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="https://purepng.com/public/uploads/medium/pink-creamy-ice-cream-cone-vsk.png" alt="Cappuccino">
+                <h3>Cappuccino</h3>
+                <p>$4.00</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="https://purepng.com/public/uploads/large/purepng.com-ice-cream-conefood-ice-cream-ice-cream-cone-cone-scoop-ice-941524625170clmqc.png" alt="Latte">
+                <h3>Latte</h3>
+                <p>$4.50</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="https://i.pinimg.com/originals/c8/4f/8f/c84f8f68075f1ae29464d2596b07151d.png" alt="Americano">
+                <h3>Americano</h3>
+                <p>$3.50</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="https://www.pngplay.com/wp-content/uploads/9/Ice-Cream-Download-Free-PNG.png" alt="Mocha">
+                <h3>Mocha</h3>
+                <p>$4.00</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="https://static.vecteezy.com/system/resources/previews/024/106/559/original/tasty-colorful-ice-cream-cup-with-syrups-and-fruits-on-transparent-background-png.png" alt="Macchiato">
+                <h3>Macchiato</h3>
+                <p>$4.00</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
