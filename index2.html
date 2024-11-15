@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,21 +11,23 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            background-color: #f8f8f8;
         }
 
         .menu-section {
-            padding: 100px 20px;
+            padding: 80px 20px;
             background-image: url("https://images.creativemarket.com/0.1.0/ps/5712110/1820/1214/m1/fpnw/wm1/qqqxep3a1kut92sn03vxmppbcdoab1fn2wooaq4jkeo5lplk1hsrwfhmmxjigj0d-.jpg?1547653193&s=17bc934034eb2087827ffdeaa03a80b3");
             background-size: cover;
             background-position: center;
             text-align: center;
-            color: #fff;
+            color: #000;
         }
 
         .menu-section h2 {
             font-size: 3rem;
             margin-bottom: 50px;
             animation: fadeInDown 1s ease-in-out;
+            color: #333;
         }
 
         .menu-container {
@@ -35,118 +38,163 @@
         }
 
         .menu-item {
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 10px;
+            background: #fff;
+            border-radius: 15px;
             padding: 20px;
-            width: calc(33.333% - 20px);
+            width: calc(30% - 20px);
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             animation: fadeInUp 1s ease-in-out;
         }
 
         .menu-item:hover {
             transform: translateY(-10px);
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
         }
 
         .menu-item img {
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             margin-bottom: 15px;
         }
 
         .menu-item h3 {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
+            color: #333;
             margin-bottom: 10px;
         }
 
         .menu-item p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
+            color: #666;
             margin-bottom: 15px;
         }
 
         .menu-item button {
             background: #C06B3E;
             color: #fff;
-            padding: 10px 20px;
+            padding: 10px 25px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             transition: background 0.3s ease, transform 0.3s ease;
-            border: 1px solid #C06B3E;
         }
 
         .menu-item button:hover {
-            background: #a5552c;
+            background: #914A2A;
             transform: scale(1.05);
         }
 
+        .cart {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #fff;
+            border: 2px solid #C06B3E;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: none;
+            max-width: 300px;
+        }
+
+        .cart h4 {
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+
+        .cart-items {
+            list-style: none;
+            padding: 0;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .cart-items li {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
         @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
-    <section id="menu" class="menu-section">
-        <h2>Our Menu</h2>
-        <div class="menu-container">
+    <div class="menu-section">
+        <h2>Product Menu</h2>
+        <div class="menu-container" id="menu-container">
             <div class="menu-item">
-                <img src="https://purepng.com/public/uploads/large/51505911158ccsfpu7zfzlnr04cvb4liizwpp2sbkldrrya3guzldprhahaiksa0pzfinpdq0zglyc9uwnnasjebkmbnlpaziozgxpkklhgx5wb.png" alt="Espresso">
-                <h3>Espresso</h3>
-                <p>$3.00</p>
-                <button>Add to Cart</button>
+                <img src="https://purepng.com/public/uploads/large/51505911158ccsfpu7zfzlnr04cvb4liizwpp2sbkldrrya3guzldprhahaiksa0pzfinpdq0zglyc9uwnnasjebkmbnlpaziozgxpkklhgx5wb.png" alt="Product 1">
+                <h3>Product 1</h3>
+                <p>$10.00</p>
+                <button onclick="addToCart('Product 1')">Add to Cart</button>
             </div>
             <div class="menu-item">
-                <img src="https://purepng.com/public/uploads/medium/pink-creamy-ice-cream-cone-vsk.png" alt="Cappuccino">
-                <h3>Cappuccino</h3>
-                <p>$4.00</p>
-                <button>Add to Cart</button>
+                <img src="https://purepng.com/public/uploads/medium/pink-creamy-ice-cream-cone-vsk.png" alt="Product 2">
+                <h3>Product 2</h3>
+                <p>$15.00</p>
+                <button onclick="addToCart('Product 2')">Add to Cart</button>
             </div>
             <div class="menu-item">
-                <img src="https://purepng.com/public/uploads/large/purepng.com-ice-cream-conefood-ice-cream-ice-cream-cone-cone-scoop-ice-941524625170clmqc.png" alt="Latte">
-                <h3>Latte</h3>
-                <p>$4.50</p>
-                <button>Add to Cart</button>
+                <img src="https://purepng.com/public/uploads/large/purepng.com-ice-cream-conefood-ice-cream-ice-cream-cone-cone-scoop-ice-941524625170clmqc.png" alt="Product 3">
+                <h3>Product 3</h3>
+                <p>$20.00</p>
+                <button onclick="addToCart('Product 3')">Add to Cart</button>
             </div>
             <div class="menu-item">
-                <img src="https://i.pinimg.com/originals/c8/4f/8f/c84f8f68075f1ae29464d2596b07151d.png" alt="Americano">
-                <h3>Americano</h3>
-                <p>$3.50</p>
-                <button>Add to Cart</button>
+                <img src="https://i.pinimg.com/originals/c8/4f/8f/c84f8f68075f1ae29464d2596b07151d.png" alt="Product 2">
+                <h3>Product 4</h3>
+                <p>$15.00</p>
+                <button onclick="addToCart('Product 2')">Add to Cart</button>
             </div>
             <div class="menu-item">
-                <img src="https://www.pngplay.com/wp-content/uploads/9/Ice-Cream-Download-Free-PNG.png" alt="Mocha">
-                <h3>Mocha</h3>
-                <p>$4.00</p>
-                <button>Add to Cart</button>
+                <img src="https://www.pngplay.com/wp-content/uploads/9/Ice-Cream-Download-Free-PNG.png" alt="Product 3">
+                <h3>Product 5</h3>
+                <p>$20.00</p>
+                <button onclick="addToCart('Product 3')">Add to Cart</button>
             </div>
             <div class="menu-item">
-                <img src="https://static.vecteezy.com/system/resources/previews/024/106/559/original/tasty-colorful-ice-cream-cup-with-syrups-and-fruits-on-transparent-background-png.png" alt="Macchiato">
-                <h3>Macchiato</h3>
-                <p>$4.00</p>
-                <button>Add to Cart</button>
+                <img src="https://static.vecteezy.com/system/resources/previews/024/106/559/original/tasty-colorful-ice-cream-cup-with-syrups-and-fruits-on-transparent-background-png.png" alt="Product 2">
+                <h3>Product 6</h3>
+                <p>$15.00</p>
+                <button onclick="addToCart('Product 2')">Add to Cart</button>
             </div>
         </div>
-    </section>
+    </div>
+
+    <div class="cart" id="cart">
+        <h4>Your Cart</h4>
+        <ul class="cart-items" id="cart-items"></ul>
+    </div>
+
+    <script>
+        function addToCart(item) {
+            const cart = document.getElementById('cart');
+            const cartItems = document.getElementById('cart-items');
+
+            const newItem = document.createElement('li');
+            newItem.textContent = item;
+            cartItems.appendChild(newItem);
+
+            cart.style.display = 'block';
+            cart.animate([
+                { transform: 'scale(0.9)', opacity: 0.7 },
+                { transform: 'scale(1)', opacity: 1 }
+            ], {
+                duration: 300,
+                easing: 'ease-out'
+            });
+        }
+    </script>
 </body>
 </html>
